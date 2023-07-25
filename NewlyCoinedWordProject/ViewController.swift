@@ -13,12 +13,19 @@ class ViewController: UIViewController {
     @IBOutlet var explainLabel: UILabel!
     @IBOutlet var buttonStyle: [UIButton]!
     
- 
+    @IBOutlet var addButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        var addword = UIButton.Configuration.filled()
+        addword.title = "+"
+        addword.titleAlignment = .center
+        addword.baseBackgroundColor = .black
         
-        newlyCoinedWordTextField.text = addword()
-        addword()
+        
+       addButton.configuration = addword
+        
+     
         
         
         for i in buttonStyle {
@@ -27,6 +34,8 @@ class ViewController: UIViewController {
             var config = UIButton.Configuration.tinted()
             config.baseForegroundColor = .black
             i.layer.cornerRadius = 10
+            i.layer.borderWidth = 3
+            i.titleLabel?.font = .boldSystemFont(ofSize: 3)
             i.configuration = config
             
             
@@ -42,6 +51,7 @@ class ViewController: UIViewController {
         
         newlyCoinedWordTextField.layer.cornerRadius = 5
         newlyCoinedWordTextField.layer.borderWidth = 3
+        
     }
     
     
@@ -64,9 +74,6 @@ class ViewController: UIViewController {
             explainLabel.text = "구독취소"
         default: explainLabel.text = "찾는내용이 없습니다."
         }
-        
-        
-        
             
         }
 
@@ -82,10 +89,12 @@ class ViewController: UIViewController {
         
     }
     
-    
+    @IBAction func unwindToHome(_ sender: UIStoryboardSegue) {
+        
+    }
     
   
-    
+
     
 }
 

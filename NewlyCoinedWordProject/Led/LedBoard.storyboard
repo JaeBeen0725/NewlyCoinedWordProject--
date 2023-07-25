@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LedBoard-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Led" id="Y6W-OH-hqX" customClass="LedBoardViewController" customModule="NewlyCoinedWordProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7H9-Ab-yCK">
+                                <rect key="frame" x="20" y="89" width="353" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d50-lT-PRh">
+                                <rect key="frame" x="208" y="94" width="150" height="24"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGj-by-55N">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="24"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="보내기"/>
+                                        <connections>
+                                            <action selector="ledSendButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LG4-It-FIT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvR-BI-eOR">
+                                        <rect key="frame" x="78" y="0.0" width="72" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="TvR-BI-eOR" secondAttribute="height" multiplier="3:1" id="CZm-rc-MfM"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Aa"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="IUA-1D-yKn"/>
+                                    <constraint firstAttribute="height" constant="24" id="v6D-Mc-1DQ"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkj-8U-DQ9">
+                                <rect key="frame" x="20" y="296" width="353" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="VyW-Sc-2UL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Mkj-8U-DQ9" secondAttribute="trailing" constant="20" id="33v-Ik-Wtp"/>
+                            <constraint firstItem="Mkj-8U-DQ9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="D1Z-EJ-Spw"/>
+                            <constraint firstItem="7H9-Ab-yCK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="Rhc-Hz-h3w"/>
+                            <constraint firstItem="d50-lT-PRh" firstAttribute="top" secondItem="7H9-Ab-yCK" secondAttribute="top" constant="5" id="VrY-Mj-CiQ"/>
+                            <constraint firstItem="7H9-Ab-yCK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="eOr-cK-pnd"/>
+                            <constraint firstItem="Mkj-8U-DQ9" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="kTw-sD-4cS"/>
+                            <constraint firstItem="d50-lT-PRh" firstAttribute="leading" secondItem="7H9-Ab-yCK" secondAttribute="trailing" constant="-165" id="kmj-bO-bYK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7H9-Ab-yCK" secondAttribute="trailing" constant="20" id="mQb-ah-Sbu"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zbP-8f-nGt" appends="YES" id="N7h-4A-vYW"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="LedBoard" image="lightbulb.led" catalog="system" id="XRF-fN-OQv"/>
+                    <connections>
+                        <outlet property="ledLabel" destination="Mkj-8U-DQ9" id="Dkg-2H-oDR"/>
+                        <outlet property="ledTextField" destination="7H9-Ab-yCK" id="ymI-dU-Ow8"/>
+                        <outletCollection property="ledButtonStyle" destination="LGj-by-55N" collectionClass="NSMutableArray" id="VmL-V4-qYA"/>
+                        <outletCollection property="ledButtonStyle" destination="TvR-BI-eOR" collectionClass="NSMutableArray" id="e8G-DY-9ya"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zbP-8f-nGt">
+                    <connections>
+                        <action selector="ledTapGesture:" destination="Y6W-OH-hqX" id="DkC-FH-u9D"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="970.2290076335878" y="-34.507042253521128"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="oRF-cA-oyt">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Awe-XG-JcF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mTn-aR-f9f">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="Bm2-kA-n4m"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1NZ-wq-JSI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="43.511450381679388" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lightbulb.led" catalog="system" width="92" height="128"/>
+    </resources>
+</document>
